@@ -204,6 +204,11 @@ class Cfdi
         return $this->parseCertificado();
     }
 
+    public function getSello()
+    {
+        return $this->sello;
+    }
+
     protected function parseCertificado()
     {
         $datos = file($this->cer);
