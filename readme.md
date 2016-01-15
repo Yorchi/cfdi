@@ -1,4 +1,4 @@
-# JorgeAndrade\CFDI32v2
+# JorgeAndrade\CFDI
 
 Este paquete te permite generar los xml para la generacion de cfdi en mexico.
 
@@ -14,11 +14,12 @@ Este paquete te permite generar los xml para la generacion de cfdi en mexico.
   - [Impuestos Trasladados](#impuestos-trasladados)
   - [Impuestos Retenidos](#impuestos-retenidos)
   - [Crear xml](#crear-xml)
+  - [Todo list](#todo-list)
 - [Licencia](#licencia)
 
 
 ## Introducción
-CFDI32v2 te permite generar el xml para el proceso de timbrado de un CFDI (Comprobante Fiscal Digital por Internet), facturacion electronica en mexio
+CFDI te permite generar el xml para el proceso de timbrado de un CFDI (Comprobante Fiscal Digital por Internet), facturacion electronica en mexio
 
 ## Instalación
 Simplemente instala el paquete con composer:
@@ -72,7 +73,7 @@ $cfdi = new Cfdi(new Factura, $cer, $key);
 ```
 
 ## Agregando datos
-Para agregar datos al xml, CFDI32v2 cuenta con un metodo llamado `add`, pasando 2 posibles parametros:
+Para agregar datos al xml, CFDI cuenta con un metodo llamado `add`, pasando 2 posibles parametros:
 - una instancia de algun objeto que extienda de CfdiData : `ConceptosData`, `DomicilioFiscalData`, `EmisorData`, `GeneralData`, `ImpuestosTrasladadosData`, `ImpuestosRetenidosData`, `ReceptorData`, `RegimenFiscalData`
 - Valor obligatorio solo para establecer el Domicio fiscal del emisor o receptor, valores permitidos: `emisor` y `receptor`
 
@@ -202,6 +203,19 @@ if ($xml = $cfdi->save($path)) {
   echo 'Comprobante creado en: ' . $xml;
 }
 ```
+
+### Todo list
+
+- [ ] Tipo de comprobante: Nomina
+- [ ] Tipo de comprobante: Contabilidad
+- [ ] Tipo de datos: Adendas
+- [ ] Tipo de datos: Complementos
+- [ ] Tipo de datos: Percepciones
+- [ ] Tipo de datos: Deducciones
+- [ ] Tipo de datos: Horas extras
+- [ ] Tipo de datos: Incapacidades
+
+
 ## Licencia
 
 Csd programa de codigo abierto bajo la licencia [MIT license](http://opensource.org/licenses/MIT)
