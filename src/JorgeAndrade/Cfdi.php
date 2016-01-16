@@ -1,7 +1,7 @@
 <?php
 namespace JorgeAndrade;
 
-error_reporting(0);
+error_reporting(E_ALL ^ E_WARNING);
 
 use DOMdocument;
 use JorgeAndrade\Contracts\CfdiTypeInterface;
