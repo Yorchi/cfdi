@@ -90,7 +90,7 @@ $cfdi->add(
     'total' => '2320.00',
     'tipoDeComprobante' => 'ingreso',
     'metodoDePago' => 'Efectivo',
-    'LugarExpedicion' => 'Merida Yucatan',
+    'LugarExpedicion' => 'CD de Mexico',
     'NumCtaPago' => 'No identificado',
   ]);
 );
@@ -103,7 +103,7 @@ La informacion guardada en los objetos CfdiData debe ser del tipo `(array)`, y e
 $cfdi->add(
   new EmisorData([
       'rfc' => 'AAD990814BP7',
-      'nombre' => 'Jorge Alberto Andrade Aguilar',
+      'nombre' => 'John Doe del Socorro',
   ])
 );
 ```
@@ -121,8 +121,8 @@ $cfdi->add(
 ```php
 $cfdi->add(
   new ReceptorData([
-    'rfc' => 'MAAA910116BD5',
-    'nombre' => 'Mariel Perez',
+    'rfc' => 'AAD990814BP7',
+    'nombre' => 'Jane Doe',
   ])
 );
 ```
@@ -132,26 +132,26 @@ $cfdi->add(
 $tipo = 'emisor'; //'emisor' o 'receptor'
 $cfdi->add(
   new DomicilioFiscalData([
-    'calle' => '23D',
-    'noExterior' => '277',
-    'colonia' => 'Vergel 2',
-    'municipio' => 'Mérida',
-    'estado' => 'Yucatán',
-    'pais' => 'México',
-    'codigoPostal' => '97173',
+    'calle' => 'Insurgente',
+    'noExterior' => '600',
+    'colonia' => 'Centro',
+    'municipio' => 'CD de Mexico',
+    'estado' => 'Mexico',
+    'pais' => 'Mexico',
+    'codigoPostal' => '99000',
   ])
   , 'emisor'
 );
 
 $cfdi->add(
   new DomicilioFiscalData([
-    'calle' => '23D',
-    'noExterior' => '277',
-    'colonia' => 'Vergel 2',
-    'municipio' => 'Mérida',
-    'estado' => 'Yucatán',
-    'pais' => 'México',
-    'codigoPostal' => '97173',
+    'calle' => 'Insurgente',
+    'noExterior' => '600',
+    'colonia' => 'Centro',
+    'municipio' => 'CD de Mexico',
+    'estado' => 'Mexico',
+    'pais' => 'Mexico',
+    'codigoPostal' => '99000',
   ])
   , 'receptor'
 );
